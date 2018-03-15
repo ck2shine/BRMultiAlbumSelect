@@ -1,1 +1,1 @@
-# BRMultiAlbumSelect
+# MultiAlbum
