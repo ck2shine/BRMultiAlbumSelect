@@ -2,7 +2,7 @@
 //  BRCircleBtn.swift
 //  MultiAlbum
 //
-//  Created by i9400503 on 2018/2/13.
+//  Created by Shine on 2018/2/13.
 //
 
 import UIKit

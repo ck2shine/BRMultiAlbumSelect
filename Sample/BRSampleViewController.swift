@@ -2,7 +2,7 @@
 //  BRSampleViewController.swift
 //  MultiAlbum
 //
-//  Created by i9400503 on 2018/3/15.
+//  Created by Shine on 2018/3/15.
 //
 
 import UIKit

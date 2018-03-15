@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MultiAlbum
 //
-//  Created by i9400503 on 2017/12/29.
+//  Created by Shine on 2017/12/29.
 //
 
 import UIKit

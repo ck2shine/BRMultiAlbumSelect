@@ -2,7 +2,7 @@
 //  BRAlbumCellController.swift
 //  MultiAlbum
 //
-//  Created by i9400503 on 2018/1/2.
+//  Created by Shine on 2018/1/2.
 //
 
 import UIKit

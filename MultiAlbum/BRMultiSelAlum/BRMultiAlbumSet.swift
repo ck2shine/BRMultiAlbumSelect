@@ -2,7 +2,7 @@
 //  BRMultiAlbumSet.swift
 //  MultiAlbum
 //
-//  Created by i9400503 on 2018/3/12.
+//  Created by Shine on 2018/3/12.
 //
 
 import Foundation

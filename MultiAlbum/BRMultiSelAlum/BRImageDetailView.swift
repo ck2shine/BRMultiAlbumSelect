@@ -2,7 +2,7 @@
 //  BRImageDetailView.swift
 //  MultiAlbum
 //
-//  Created by i9400503 on 2018/2/12.
+//  Created by Shine on 2018/2/12.
 //
 
 import UIKit

@@ -2,7 +2,7 @@
 //  BRPicScaleLayout.swift
 //  MultiAlbum
 //
-//  Created by i9400503 on 2018/1/19.
+//  Created by Shine on 2018/1/19.
 //
 
 import UIKit

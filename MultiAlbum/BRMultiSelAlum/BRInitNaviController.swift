@@ -2,7 +2,7 @@
 //  BRInitNaviController.swift
 //  MultiAlbum
 //
-//  Created by i9400503 on 2018/3/14.
+//  Created by Shine on 2018/3/14.
 //
 
 import UIKit

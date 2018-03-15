@@ -2,7 +2,7 @@
 //  BRSelectPicDelegate.swift
 //  MultiAlbum
 //
-//  Created by i9400503 on 2018/3/9.
+//  Created by Shine on 2018/3/9.
 //
 
 import Foundation

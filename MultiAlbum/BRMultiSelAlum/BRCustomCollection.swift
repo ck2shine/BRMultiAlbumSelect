@@ -2,7 +2,7 @@
 //  BRCustomCollection.swift
 //  MultiAlbum
 //
-//  Created by i9400503 on 2018/1/11.
+//  Created by Shine on 2018/1/11.
 //
 
 import UIKit
