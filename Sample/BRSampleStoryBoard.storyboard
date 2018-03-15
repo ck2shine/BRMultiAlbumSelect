@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vcK-D2-Ub2">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sample View Controller-->
+        <scene sceneID="Cpk-zz-mT7">
+            <objects>
+                <viewController id="vcK-D2-Ub2" customClass="BRSampleViewController" customModule="MultiAlbum" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yYA-wg-oWR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zkb-9t-kaz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y1A-xE-Ixs">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aB-1t-Jv6">
+                                <rect key="frame" x="20" y="20" width="104" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="BFb-wB-giD"/>
+                                    <constraint firstAttribute="width" constant="104" id="sn4-RF-des"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="SelectPhoto"/>
+                                <connections>
+                                    <action selector="selectAction:" destination="vcK-D2-Ub2" eventType="touchUpInside" id="aBv-wY-Pud"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PgD-ai-eiO">
+                                <rect key="frame" x="0.0" y="63" width="1024" height="705"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wpV-uU-zDf">
+                                    <size key="itemSize" width="170" height="170"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BRSampleCell" id="gel-3o-XaV" customClass="BRSampleCellController" customModule="MultiAlbum" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gLm-Cc-1uW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="gLm-Cc-1uW" secondAttribute="bottom" id="2Mz-Th-0Qm"/>
+                                            <constraint firstItem="gLm-Cc-1uW" firstAttribute="leading" secondItem="gel-3o-XaV" secondAttribute="leading" id="3Gp-0f-dDb"/>
+                                            <constraint firstItem="gLm-Cc-1uW" firstAttribute="top" secondItem="gel-3o-XaV" secondAttribute="top" id="sRM-uy-I42"/>
+                                            <constraint firstAttribute="trailing" secondItem="gLm-Cc-1uW" secondAttribute="trailing" id="zzW-Tk-INf"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="sImg" destination="gLm-Cc-1uW" id="NbA-hC-FbY"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="vcK-D2-Ub2" id="4Yi-o2-UEl"/>
+                                    <outlet property="delegate" destination="vcK-D2-Ub2" id="ec7-2b-Cys"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PgD-ai-eiO" firstAttribute="leading" secondItem="y1A-xE-Ixs" secondAttribute="leading" id="2sw-Du-XXQ"/>
+                            <constraint firstItem="3aB-1t-Jv6" firstAttribute="leading" secondItem="y1A-xE-Ixs" secondAttribute="leading" constant="20" id="LfQ-DE-wg3"/>
+                            <constraint firstAttribute="trailing" secondItem="PgD-ai-eiO" secondAttribute="trailing" id="aJA-3K-J7P"/>
+                            <constraint firstItem="PgD-ai-eiO" firstAttribute="top" secondItem="3aB-1t-Jv6" secondAttribute="bottom" constant="8" id="bPi-mO-1fj"/>
+                            <constraint firstItem="Zkb-9t-kaz" firstAttribute="top" secondItem="PgD-ai-eiO" secondAttribute="bottom" id="bS4-9j-opq"/>
+                            <constraint firstItem="3aB-1t-Jv6" firstAttribute="top" secondItem="yYA-wg-oWR" secondAttribute="bottom" id="vU0-da-HXM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photosCollection" destination="PgD-ai-eiO" id="QRW-Ak-6l1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBb-19-5SR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-473" y="-65"/>
+        </scene>
+    </scenes>
+</document>

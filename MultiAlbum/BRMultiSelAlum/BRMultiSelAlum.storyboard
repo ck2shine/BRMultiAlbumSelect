@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h6n-Nm-pnT">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Init Navi Controller-->
+        <scene sceneID="5SF-qP-lxX">
+            <objects>
+                <navigationController restorationIdentifier="BRMultiSelAlumNav" storyboardIdentifier="BRMultiSelAlumNav" id="h6n-Nm-pnT" customClass="BRInitNaviController" customModule="BRMultiAlbum" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="20l-as-HO7">
+                        <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iI7-Gc-f9R" kind="relationship" relationship="rootViewController" id="cLd-Ho-aIC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nE1-1E-S95" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1615" y="-280"/>
+        </scene>
+        <!--相簿-->
+        <scene sceneID="PFs-pE-OyV">
+            <objects>
+                <collectionViewController id="iI7-Gc-f9R" customClass="BRMultiSelAlumViewController" customModule="BRMultiAlbum" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="1PY-t5-mS7">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CWf-Ug-TSR">
+                            <size key="itemSize" width="1024" height="160"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="iI7-Gc-f9R" id="tFG-l1-0vw"/>
+                            <outlet property="delegate" destination="iI7-Gc-f9R" id="4Q4-gl-ZbK"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="相簿" id="TeV-81-uNQ">
+                        <barButtonItem key="backBarButtonItem" title="相簿" id="LEc-2l-K3J"/>
+                        <barButtonItem key="rightBarButtonItem" title="取消" id="dZe-2O-OsA">
+                            <connections>
+                                <action selector="cancelAction:" destination="iI7-Gc-f9R" id="KyD-DG-AQq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="a2Y-nY-nXy" kind="show" identifier="toDetail" id="pFr-RG-lD8"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbd-OF-gWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-731" y="-280"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="T4o-Mp-pUr">
+            <objects>
+                <collectionViewController id="a2Y-nY-nXy" customClass="BRDetailViewController" customModule="BRMultiAlbum" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Y04-TT-70M">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="yFZ-k7-SOC">
+                            <size key="itemSize" width="150" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="a2Y-nY-nXy" id="rfa-KA-4Vb"/>
+                            <outlet property="delegate" destination="a2Y-nY-nXy" id="FAP-kv-7Vh"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="XRv-GG-GD0">
+                        <barButtonItem key="backBarButtonItem" title="haha" id="rq5-id-ohG"/>
+                        <barButtonItem key="rightBarButtonItem" title="確定選擇(0)" id="DUm-Va-azY">
+                            <connections>
+                                <segue destination="6Zf-3C-Vlb" kind="unwind" unwindAction="unwindToMainVc:" id="4W7-0k-Q4d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="totalPicConfirm" destination="DUm-Va-azY" id="lZU-e3-o5V"/>
+                        <segue destination="vFa-wf-mm5" kind="show" identifier="toScale" id="EYs-gJ-NzY"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AW2-6f-fvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="6Zf-3C-Vlb" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="-280"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="6Qv-wW-Ewb">
+            <objects>
+                <collectionViewController id="vFa-wf-mm5" customClass="BRPicSclaeViewController" customModule="BRMultiAlbum" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" id="FO2-Qd-8hy">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="HKi-BK-pPx">
+                            <size key="itemSize" width="1024" height="704"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="vFa-wf-mm5" id="yFK-FD-A05"/>
+                            <outlet property="delegate" destination="vFa-wf-mm5" id="t5Z-LC-exi"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Title" id="vuo-HD-S2J"/>
+                    <connections>
+                        <outlet property="ScaleCol" destination="FO2-Qd-8hy" id="s8j-vm-1iW"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eDp-uo-4bv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1198" y="-280"/>
+        </scene>
+    </scenes>
+</document>

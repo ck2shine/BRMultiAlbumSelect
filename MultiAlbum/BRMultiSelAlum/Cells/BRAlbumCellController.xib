@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BRAlbumCellController" id="AFj-MU-JQH" customClass="BRAlbumCellController" customModule="MultiAlbum" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="1024" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nRp-Py-cpr">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="160" id="EtX-Id-4yf"/>
+                            <constraint firstAttribute="width" constant="160" id="QZ7-vu-2bx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第一本相簿名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnp-dG-22g">
+                        <rect key="frame" x="180" y="65" width="177.5" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5,000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xi6-lX-5XP">
+                        <rect key="frame" x="180" y="95" width="120" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="HDP-8n-Gnk"/>
+                            <constraint firstAttribute="width" constant="120" id="aUR-rc-KAQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="nRp-Py-cpr" firstAttribute="top" secondItem="AFj-MU-JQH" secondAttribute="top" id="8h4-Ws-5yc"/>
+                <constraint firstAttribute="bottom" secondItem="nRp-Py-cpr" secondAttribute="bottom" id="Y0A-eS-cRQ"/>
+                <constraint firstItem="lnp-dG-22g" firstAttribute="leading" secondItem="nRp-Py-cpr" secondAttribute="trailing" constant="20" id="awx-sq-s0Y"/>
+                <constraint firstItem="lnp-dG-22g" firstAttribute="centerY" secondItem="AFj-MU-JQH" secondAttribute="centerY" id="izc-LR-Si6"/>
+                <constraint firstItem="xi6-lX-5XP" firstAttribute="top" secondItem="lnp-dG-22g" secondAttribute="bottom" id="qbH-Vc-DYM"/>
+                <constraint firstItem="nRp-Py-cpr" firstAttribute="leading" secondItem="AFj-MU-JQH" secondAttribute="leading" id="ulu-uz-a6E"/>
+                <constraint firstItem="xi6-lX-5XP" firstAttribute="leading" secondItem="nRp-Py-cpr" secondAttribute="trailing" constant="20" id="wTg-TZ-Llk"/>
+            </constraints>
+            <connections>
+                <outlet property="albumImge" destination="nRp-Py-cpr" id="TqB-5P-hTO"/>
+                <outlet property="albumTitle" destination="lnp-dG-22g" id="afz-Yh-W8R"/>
+                <outlet property="imgCountLb" destination="xi6-lX-5XP" id="btg-F9-Bus"/>
+            </connections>
+            <point key="canvasLocation" x="45" y="150"/>
+        </collectionViewCell>
+    </objects>
+</document>
