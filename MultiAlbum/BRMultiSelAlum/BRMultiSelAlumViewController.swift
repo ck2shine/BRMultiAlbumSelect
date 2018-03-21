@@ -108,8 +108,10 @@ class BRMultiSelAlumViewController: BRCustomCollection {
             }
         }
         
-        self.delegate?.didSelectConfirmPic(picAry: imgAry)
-        self.dismiss(animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.delegate?.didSelectConfirmPic(picAry: imgAry)
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     func getAllAlbum()
